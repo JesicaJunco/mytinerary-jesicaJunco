@@ -33,11 +33,11 @@ export default function Header() {
       </div>
       <nav className="hidden md:flex space-x-4">
       { 
-          links.map((link) => (<LinkRouter key={link.title} to={link.to} className='navbar-link text-black'> {link.title}
+          links.map((link) => (<LinkRouter key={link.title} to={link.to} className='navbar-link text-black hover:text-gray-200 transition-colors duration-300'> {link.title}
           </LinkRouter> ))
         }   
         </nav>     
-        <ButtonAvatar/>
+        <ButtonAvatar className="md:hidden"/>
       </header>
     </>
   );
