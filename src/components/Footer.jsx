@@ -3,19 +3,24 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer className="text-center bg-gradient-to-r from-teal-600 to-teal-300">
+      <footer className="text-center bg-white">
         <div className="text-center justify-center flex flex-col gap-3 p-3 mr-4 ml-4">
-          <span className="mb-3" >
-            Our app will help you find the perfect path for your next trip. With
-            an easy-to-use interface and a host of itinerary options, planning
-            your next trip has never been easier.
+          <span className="mb-3 text-gray-800 font-serif text-lg leading-relaxed">
+            Our app will guide you to discover the perfect path for your
+            upcoming adventure. Featuring a user-friendly interface and a wide
+            array of itinerary choices, crafting your next journey has never
+            been more delightful.
           </span>
-          <span class="before:block before:absolute before:-inset-3 before:-skew-y-5 before:bg-pink-200 relative inline-block">
-    <span class="relative text-black font-customFont1 text-xl">Find your perfect trip, designed by insiders who know and love their cities.</span>
-  </span>
+          <span class="relative inline-block">
+            <span class="absolute inset-0 z-1 bg-gradient-to-r from-indigo-600 to-indigo-400 transform -skew-y-4"></span>
+            <span class="relative text-white font-bold font-customFont1 text-xl">
+              Find your perfect trip, designed by insiders who know and love
+              their cities.
+            </span>
+          </span>
         </div>
         <div className="container pt-9">
-          <div className="mb-9 flex justify-center [&_a:hover]:animate-bounce">
+          <div className="mb-5 flex justify-center [&_a:hover]:animate-bounce">
             <a href="https://www.facebook.com/" class="mr-9 text-black-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +87,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-neutral-700">
+        <div className="bg-white p-1 text-center text-neutral-700 dark:bg-neutral-700">
           © 2023 Developed by Jesica Junco
         </div>
       </footer>
