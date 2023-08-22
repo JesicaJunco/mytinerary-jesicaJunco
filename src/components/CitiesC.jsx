@@ -45,7 +45,7 @@ export default function Cities() {
       cities?.length > 0 ? 
       cities?.map((city) => (
         <LinkRouter key={city._id} to={`/cities/${city._id}`}>
-          <Card city={city.city} country={city.country} url={city.url} />
+          <Card city={city.city} country={city.country} image={city.image} />
         </LinkRouter>
       ))
       :
