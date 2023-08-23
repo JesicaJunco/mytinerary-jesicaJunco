@@ -3,9 +3,9 @@ import React from "react";
 export default function ButtonAvatar() {
   return (
     <>
-      <div class="hidden md:flex">
-    <img class="inline-block h-10 w-10 rounded-full " src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png?w=740&t=st=1691635609~exp=1691636209~hmac=7bf706286039e41fcd97318d0dc1ca7299afefe281d2a6088411afa4b5fbca7b" alt="avatar"/>
-    </div>
+      <a href="#" className="flex rounded-full border-white border-1 drop-shadow-darkShadow hover:drop-shadow-lightShadow ">
+      <svg className="w-8 h-8 stroke-sky-500 md:ml-2 text-sky-400" fill="currentColor" viewBox="0 0 20 22" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
+    </a>
     </>
   );
 }

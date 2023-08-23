@@ -4,6 +4,7 @@ import Layouts from "../layouts/Layouts";
 import Welcome from "../pages/Welcome";
 import Details from "../pages/CityDetails";
 import SignIn from "../pages/SignIn";
+import NotFound from "../components/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -17,9 +18,9 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: (
-          <h1 className="bg-black text-white text-center drop-shadow-lightShadow">
-            Error Page
-          </h1>
+          
+          <NotFound/>
+          
         ),
       },
     ],

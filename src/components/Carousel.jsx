@@ -99,7 +99,7 @@ const Carousel = () => {
   return (
     <>
       <div className="min-h-[60vh] bg-white relative">
-        <h2 className="text-center text-black font-bold font-customFont2 text-xl p-4">
+        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-red-600 via-purple-500 to-teal-300 text-transparent bg-clip-text p-4 animate-bounce shadow-md">
           Popular MYTINERARIES
         </h2>
         <div className="md:mx-20 h-[70vh] grid grid-cols-2 grid-rows-2 relative">
@@ -110,21 +110,23 @@ const Carousel = () => {
                 src={image.url}
                 alt=""
               />
+              <div className="bg-gray-800">
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
                 <p
-                  className={`text-sm text-center font-medium uppercase tracking-widest ${
-                    idx % 2 === 0 ? "text-red-500" : "text-yellow-400"
+                  className={`text-lg font-customFont1 font-extrabold uppercase tracking-widest ${
+                    idx % 2 === 0 ? "text-pink-500" : "text-teal-300"
                   }`}
                 >
                   {image.city}
                 </p>
                 <p
-                  className={`text-xl text-center font-bold ${
-                    idx % 2 === 0 ? "text-green-100" : "text-green-400"
+                  className={`text-xl font-bold ${
+                    idx % 2 === 0 ? "text-green-100" : "text-white"
                   } sm:text-2xl`}
                 >
                   {image.country}
                 </p>
+              </div>
               </div>
             </div>
           ))}

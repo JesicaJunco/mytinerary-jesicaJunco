@@ -3,9 +3,14 @@ import React from 'react';
 export default function BannerCities() {
   return (
     <>
-      <div className='w-100 h-96 bg-cover bg-center flex justify-center items-center'>
-        <img src="https://thumbs.dreamstime.com/b/%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0-d-107728312.jpg" alt="BannerCities" />
+      <div className='w-full bg-cover'>
+        <img src="https://img.freepik.com/foto-gratis/concepto-viaje-puntos-referencia-todo-mundo_23-2149153263.jpg?3&w=740&t=st=1692756598~exp=1692757198~hmac=4b19936c78ebc565fa3d509d3f4fc2afc9d63b081ff74f20039ce48c51d8a180" alt="banner" className='w-full h-[700px] overflow-hidden bg-cover'/>
       </div>
+      <h1 className="text-8xl font-bold absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <span className="bg-gradient-to-r from-red-400 via-fuchsia-300 to-sky-500 text-transparent bg-clip-text">
+          City
+        </span>
+      </h1>
     </>
   )
 }
