@@ -1,9 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit'
+import userReducer from "./reducers/userReducers.js"
+import cityReducer from "./reducers/cityReducers.js"
 
-const store = configureStore({
+export const store = configureStore({
     reducer: {
-
-    }
+        userReducer: userReducer,
+        cityReducer: cityReducer
+    },
 })
-
-export default store;

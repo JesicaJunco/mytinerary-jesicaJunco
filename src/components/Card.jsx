@@ -1,4 +1,5 @@
 import React from "react";
+import Location from './svgs/Location.jsx'
 
 export function Card({ city, country, image }) {
   return (

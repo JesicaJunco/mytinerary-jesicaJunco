@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import UnderContruction from "./UnderContruction.jsx";
+import Itenerary from "./Itenerary.jsx";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link as LinkRouter } from "react-router-dom";
@@ -11,11 +11,11 @@ export default function DetailsCard() {
     axios
       .get(`http://localhost:7000/api/cities/${id}`)
       .then((response) => {
-        setCities(response.data.city);
+        setCities(response.data.city)
       })
       .catch((error) => {
-        console.log(error);
-      });
+        console.log(error)
+      })
   }, []);
   return (
     <>
@@ -35,8 +35,8 @@ export default function DetailsCard() {
             Go back{" "}
           </LinkRouter>
         </div>
-        <UnderContruction />
       </div>
+      <Itenerary />
     </>
   );
 }

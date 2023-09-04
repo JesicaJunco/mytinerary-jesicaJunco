@@ -1,7 +1,7 @@
 import { Link as LinkRouter } from "react-router-dom";
 import { Card } from "./Card.jsx";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import NotFound from "./NotFound.jsx";
 
 // fetch, consulta con los bases de datos,// usuario redux.
@@ -9,23 +9,15 @@ export default function Cities() {
   const [cities, setCities] = useState();
   let inputSearch = useRef();
   useEffect(() => {
-    axios
-      .get("http://localhost:7000/api/cities")
-      .then((response) => {
-        setCities(response.data.cities);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    axios.get('http://localhost:7000/api/cities')
+      .then((response) => {setCities(response.data.cities)})
+      .catch((error) => {console.log(error)});
   }, []);
-  const handleInputChange = async (city) => {
-    console.log(city.target.value);
-
+  const handleInputChange = async () => {
+    const city = inputSearch.current.value
     try {
-      const res = await axios.get(
-        `http://localhost:7000/api/cities?city=${city}`
-      );
-      setCities(res.data.cities);
+      const res = await axios.get(`http://localhost:7000/api/cities?city=${city}`)
+      setCities(res.data.cities)
     } catch (error){
       if(error.response.status === 404){
           Swal.fire('We did not find any city with that name');
@@ -34,7 +26,7 @@ export default function Cities() {
           console.log(error)
       }
     }
-  };
+  }
 
   return (
     <>
