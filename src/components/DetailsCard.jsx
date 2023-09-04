@@ -8,14 +8,9 @@ export default function DetailsCard() {
   let { id } = useParams();
   const [cities, setCities] = useState();
   useEffect(() => {
-    axios
-      .get(`http://localhost:7000/api/cities/${id}`)
-      .then((response) => {
-        setCities(response.data.city)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    axios.get(`http://localhost:7000/api/cities/${id}`)
+      .then((response) => {setCities(response.data.city)})
+      .catch((error) => {console.log(error)})
   }, []);
   return (
     <>

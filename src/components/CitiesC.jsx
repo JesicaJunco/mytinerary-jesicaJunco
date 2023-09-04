@@ -1,8 +1,8 @@
 import { Link as LinkRouter } from "react-router-dom";
 import { Card } from "./Card.jsx";
-import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import NotFound from "./NotFound.jsx";
+
 
 // fetch, consulta con los bases de datos,// usuario redux.
 export default function Cities() {
