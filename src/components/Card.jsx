@@ -31,6 +31,7 @@ export function Card({ city, country, image }) {
               strokeLinejoin="round"
             />
           </svg>
+          <Location/>
           <p className="md:text-1xl pl-1 text-black font-bold">{country}</p>
         </div>
         <button className="absolute bottom-2 left-2 px-1 py-1 bg-teal-500 hover:bg-blue text-white font-semibold hover:text-black border border-blue hover:border-transparent rounded">
