@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Google(){
-    <a href="https://www.google.com/" className="mr-9 text-black-800">
+    
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="h-5 w-5"
@@ -14,5 +14,5 @@ export default function Google(){
         clipRule="evenodd"
       />
     </svg>
-  </a>
+  
 }

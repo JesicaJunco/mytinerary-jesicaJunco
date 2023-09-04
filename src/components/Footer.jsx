@@ -1,5 +1,12 @@
 import React from "react";
-import Footer from '../styles/Footer.css'
+import Footer from "../styles/Footer.css";
+import links from "../utiles/links";
+import { Link as LinkRouter } from "react-router-dom";
+import Facebook from "./svgs/Facebook.jsx";
+import Google from "./svgs/Google.jsx";
+import Github from "./svgs/Github.jsx";
+import Linkedin from "./svgs/Linkedin.jsx";
+import X from "./svgs/X.jsx";
 
 export default function Footer() {
   return (
@@ -22,7 +29,48 @@ export default function Footer() {
         </div>
         <div className="container pt-9">
           <div className="mb-5 flex justify-center [&_a:hover]:animate-bounce">
-            
+            <ul className="list-disc list-inside self-center space-y-8">
+              {links.map((link, index) => (
+                <LinkRouter
+                  key={index}
+                  to={link.to}
+                  className="hover:text-sky-400 transition"
+                >
+                  {" "}
+                  <li>{link.title}</li>
+                </LinkRouter>
+              ))}
+            </ul>
+            <ul role="list" className="space-y-8">
+              <li>
+                <a
+                  href="https://www.google.com/"
+                  className="mr-9 text-black-800"
+                >
+                  <Google />
+                </a>
+                </li>
+                <li>
+                <a href="https://github.com/" className="mr-9 text-black-800">
+                  <Github/>
+                    </a>
+                </li>
+                <li>
+                <a href="https://www.facebook.com/" className="mr-9 text-black-800">
+                  <Facebook/>
+                </a>
+                </li>
+                <li>
+                <a href="https://twitter.com/" className="mr-9 text-black-800">
+                  <X/>
+                </a>
+                </li>
+                <li>
+                <a href="https://www.linkedin.com/" className="mr-9 text-black-800">
+                  <Linkedin/>
+                </a>
+                </li>
+            </ul>
           </div>
         </div>
         <div className="bg-white p-1 text-center text-neutral-700 dark:bg-neutral-700">
