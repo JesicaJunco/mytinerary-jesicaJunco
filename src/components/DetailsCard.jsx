@@ -15,9 +15,10 @@ export default function DetailsCard() {
   return (
     <>
       <div
-        className="bg-cover bg-center min-h-[80vh] text-black mt-12"
+        className="bg-cover bg-center min-h-[80vh] text-black mt-12 mb-2"
         style={{ backgroundImage: `url('${cities?.image}')` }}
       >
+        <div className="grid justify-center mx-auto w-4/5 md:w-3/5 h-3/6 mt-18 border-double border border-teal-500 rounded-2xl bg-gray-100 bg-opacity-60">
         <div className="py-12 min-h-[50vh] flex flex-col justify-center rounded-3xl">
           <h2 className="text-center text-4xl py-1 ">{cities?.city}</h2>
           <h3 className="text-center text-3xl py-1">{cities?.country}</h3>
@@ -29,6 +30,7 @@ export default function DetailsCard() {
             {" "}
             Go back{" "}
           </LinkRouter>
+        </div>
         </div>
       </div>
       <Itenerary />

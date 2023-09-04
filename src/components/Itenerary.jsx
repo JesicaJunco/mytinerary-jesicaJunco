@@ -17,10 +17,10 @@ export default function ItineraryCity() {
     <>
     <div className='flex justify-center'>
         <div className='min-h-[30vh] w-[60vw]'>
-            <div className='min-h-[10vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
+            <div className='min-h-[10vh] flex justify-center bg-cyan-300 my-2 rounded-lg p-2'>
                 <h2>Name of the Itinerary</h2>
             </div>
-            <div className='min-h-[15vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
+            <div className='min-h-[15vh] flex justify-center bg-cyan-400 my-2 rounded-lg p-2'>
                 <div className='w-[30vw] flex justify-center' > <h2> Price Duration </h2> </div>
                 <div className='w-[30vw] flex justify-center' > <h2> User and Photo </h2></div>
                 <div className='w-[30vw] flex justify-center' > 
@@ -30,7 +30,7 @@ export default function ItineraryCity() {
                     </div>      
                 </div>
             </div>
-            <div className='min-h-[15vh] bg-teal-700 my-2 rounded-lg p-2'>
+            <div className='min-h-[15vh] bg-cyan-500 my-2 rounded-lg p-2'>
                 <div className="collapse">
                     <input type="checkbox" /> 
                     <div className="collapse-title text-xl font-medium text-center">
