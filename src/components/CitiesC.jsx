@@ -1,4 +1,5 @@
 import { Link as LinkRouter } from "react-router-dom";
+import axios from 'axios';
 import { Card } from "./Card.jsx";
 import { useEffect, useState, useRef } from "react";
 import NotFound from "./NotFound.jsx";
