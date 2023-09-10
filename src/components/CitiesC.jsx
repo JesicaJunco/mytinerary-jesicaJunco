@@ -1,57 +1,47 @@
 import { Link as LinkRouter } from "react-router-dom";
-import axios from 'axios';
 import { Card } from "./Card.jsx";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import NotFound from "./NotFound.jsx";
-
+import  Search from "../components/svgs/Search.jsx";
+import Refresh from "./svgs/Refresh.jsx";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {filter_cities, get_cities} from "../store/actions/cityActions.js";
 
 // fetch, consulta con los bases de datos,// usuario redux.
 export default function Cities() {
-  const [cities, setCities] = useState();
+  const cities = useSelector((store) => store.cityReducers.cities)
   let inputSearch = useRef();
-  useEffect(() => {
-    axios.get('http://localhost:7000/api/cities')
-      .then((response) => {setCities(response.data.cities)})
-      .catch((error) => {console.log(error)});
-  }, []);
-  const handleInputChange = async () => {
-    const city = inputSearch.current.value
-    try {
-      const res = await axios.get(`http://localhost:7000/api/cities?city=${city}`)
-      setCities(res.data.cities)
-    } catch (error){
-      if(error.response.status === 404){
-          Swal.fire('We did not find any city with that name');
-          setCities([])
-      }else{
-          console.log(error)
-      }
-    }
+  const dispatch = useDispatch()
+  useEffect(()=>{
+      dispatch(get_cities()) 
+  },[]);
+  const handleInputSearch = () =>{
+      dispatch(filter_cities({
+          city: inputSearch.current.value
+      }))  
+  }
+  const navigate = useNavigate(0)
+  const refreshPage = () => {
+      navigate(0);
   }
 
   return (
     <>
       <div className="bg-white flex flex-col justify-center items-center">
         <div className="relative flex items-center">
-          <svg
-            className="w-4 h-4 text-gray-500 absolute left-3"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
           <input
-            onChange={handleInputChange}
+            ref={inputSearch}
             type="text"
             className="rounded-md pl-10 h-8 self-center my-3"
             placeholder="Search your city"
           />
+          <button onClick={handleInputSearch} className='border rounded-lg border-lime-500  mx-1 my-2 bg-teal-100 hover:bg-teal-600 hover:border-lime-400'>
+                <Search/>
+            </button>
+            <button onClick={refreshPage} className='border mx-1 my-2 rounded-lg border-lime-500  bg-teal-100 h-10 w-10 hover:bg-teal-600 hover:border-lime-400'>
+                <Refresh/>
+            </button>
         </div>
         <div className="flex flex-wrap justify-center items-center gap-4">
           {cities?.length > 0 ? (

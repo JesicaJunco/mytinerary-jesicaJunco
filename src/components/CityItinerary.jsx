@@ -21,7 +21,7 @@ export default function ItineraryCity() {
                 <h2>Name of the Itinerary</h2>
             </div>
             <div className='min-h-[15vh] flex justify-center bg-cyan-400 my-2 rounded-lg p-2'>
-                <div className='w-[30vw] flex justify-center' > <h2> Price Duration </h2> </div>
+                <div className='w-[30vw] flex justify-center' > <h2></h2> </div>
                 <div className='w-[30vw] flex justify-center' > <h2> User and Photo </h2></div>
                 <div className='w-[30vw] flex justify-center' > 
                     <h2>Hashtags</h2> 
