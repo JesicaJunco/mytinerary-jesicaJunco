@@ -10,7 +10,7 @@ import {filter_cities, get_cities} from "../store/actions/cityActions.js";
 
 // fetch, consulta con los bases de datos,// usuario redux.
 export default function Cities() {
-  const cities = useSelector((store) => store.cityReducers.cities)
+  const cities = useSelector((store) => store.cityReducer.cities)
   let inputSearch = useRef();
   const dispatch = useDispatch()
   useEffect(()=>{
