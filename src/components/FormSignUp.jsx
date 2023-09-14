@@ -58,7 +58,6 @@ export default function FormSignUp() {
               <div className="px-4 md:px-0 ">
                 <div className=" md:p-12">
                   <div className="text-center">
-                    <img className="mx-auto w-60" src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"/>
                     <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
                       Sign Up and find your perfect trip!
                     </h4>
