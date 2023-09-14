@@ -54,7 +54,7 @@ export default function FormSignUp() {
       <div className=" p-10">
         <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
           <div className="md:w-6/12">
-            <div className="rounded-lg bg-sky-800 ">
+            <div className="rounded-lg bg-yellow-500 ">
               <div className="px-4 md:px-0 ">
                 <div className=" md:p-12">
                   <div className="text-center">

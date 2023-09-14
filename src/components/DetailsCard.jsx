@@ -32,7 +32,7 @@ import NotFound from './NotFound.jsx';
               Go back{" "}
             </LinkRouter>
           </div>
-          {
+          { 
             city.itineraries?.length > 0
             ? city.itineraries?.map((itinerary) => (
                 <CityItinerary key={itinerary._id} _id={itinerary._id}/>
