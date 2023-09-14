@@ -1,27 +1,50 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { get_user_by_id, user_photo } from '../actions/userActions';
+import { get_user_by_id, user_signin, user_signin_google, user_signout, user_signup, user_token } from '../actions/userActions';
 
 const initialState = {
-    user:{},
-    name: 'Random name',
-    photo: 'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg'
+    user: null,
+    token: null
 }
-
-const userReducer = createReducer(initialState,
-    (builder) => builder
-        .addCase(user_photo, (state, action) => {
-            return {
+const userReducer = createReducer (initialState, (builder)=>
+    builder 
+        .addCase(get_user_by_id.fulfilled, (state, action)=>{
+            return{
                 ...state,
-                photo: action.payload.photo
+                user: action.payload.user
             }
         })
-        .addCase(get_user_by_id.fulfilled,
-            (state, action)=>{
-                return{
-                    ...state,
-                    user: action.payload.user
-                }
+        .addCase(user_signin.fulfilled, (state, action)=>{
+            return{
+                ...state,
+                user: action.payload.user,
+                token: action.payload.token
+            }
+        })
+        .addCase(user_signup.fulfilled, (state, action)=>{
+            return{
+                ...state,
+                user: action.payload.user,
+                token: action.payload.token
+            }
+        })
+        .addCase(user_signin_google.fulfilled, (state, action)=>{
+            return{
+                ...state,
+                user: action.payload.user,
+                token: action.payload.token
+            }
+        })
+        .addCase(user_signout, () => {
+            return {
+                user: null,
+                token: null
+            }
+        })
+        .addCase(user_token, (state, action) => {
+            return {
+                ...state,
+                user: action.payload.user,
+            }
         })
 )
-
 export default userReducer
