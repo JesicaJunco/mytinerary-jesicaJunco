@@ -45,10 +45,10 @@ export default function ItineraryCity() {
                         Click here to see the comments
                         { <button>Button View More</button> }
                     </div>
-                    <div className="collapse-content"> 
-                        //<UnderContruction/>
+                   {/* <div className="collapse-content"> 
+                        { <UnderContruction/>}
                         </div> 
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </div>
