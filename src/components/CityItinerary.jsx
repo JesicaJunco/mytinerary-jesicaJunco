@@ -1,18 +1,21 @@
-import axios from 'axios';
-import React, { useEffect, useState , useSelector} from 'react'
+import { useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import UnderContruction from './UnderContruction.jsx'
 import UserItinerary from "./UserItinerary.jsx";
 import PriceItinerary from './PriceItinerary.jsx';
-//import { Card , CardHeader , CardBody , CardFooter } from "@nextui-org/react" ;   
+import { useDispatch, useSelector } from 'react-redux';
+import {get_itinerary_by_id} from '../store/actions/itineraryActions.js'
 
 
-export default function ItineraryCity({_id}) {
+
+export default function ItineraryCity() {
+    let { id } = useParams();
     const itinerary = useSelector((store) => store.itineraryReducer.itinerary)
     const dispatch = useDispatch()
       useEffect(()=>{
-          dispatch(get_itinerary_by_id(_id)) 
+          dispatch(get_itinerary_by_id(id)) 
       },[])
+    
     return (
     <>
      <div className='flex justify-center'>
@@ -40,7 +43,7 @@ export default function ItineraryCity({_id}) {
                     <input type="checkbox" /> 
                     <div className="collapse-title text-2xl font-medium text-center">
                         Click here to see the comments
-                        {/* <button>Button View More</button> */}
+                        { <button>Button View More</button> }
                     </div>
                     <div className="collapse-content"> 
                         //<UnderContruction/>
@@ -52,3 +55,8 @@ export default function ItineraryCity({_id}) {
     </>
   )
 }
+
+
+
+
+

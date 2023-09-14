@@ -14,3 +14,15 @@ export const get_itinerary_by_id = createAsyncThunk('get_itinerary_by_id', async
         }
     }
 })
+export const getItinerariesByCityId = createAsyncThunk('getItinerariesByCityId', async (id) => {
+    try {
+        const response = await axios.get(`http://localhost:7000/api/itineraries?cityId=${id}`)
+        return {
+            itineraries: response.data.itineraries
+        }
+       
+    } catch (error) {
+        console.log(error)
+    }
+    console.log(itineraries)
+})

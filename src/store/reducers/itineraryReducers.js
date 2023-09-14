@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { get_itinerary_by_id } from "../actions/itineraryActions.js";
+import { get_itinerary_by_id, getItinerariesByCityId } from "../actions/itineraryActions.js";
 
 const initialState = {
     itinerary: {},
@@ -13,6 +13,12 @@ const itineraryReducers = createReducer(initialState,
                     ...state,
                     itinerary: action.payload.itinerary
                 }
+        })
+        .addCase(getItinerariesByCityId.fulfilled, (state, action) => {
+            return {
+                ...state,
+                itineraries: action.payload.itineraries
+            }
         })
 )
 export default itineraryReducers;
