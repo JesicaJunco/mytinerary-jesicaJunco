@@ -43,7 +43,7 @@ export default function ItineraryCity({_id}) {
                         {/* <button>Button View More</button> */}
                     </div>
                     <div className="collapse-content"> 
-                        <UnderContruction/>
+                        //<UnderContruction/>
                         </div> 
                     </div>
                 </div>

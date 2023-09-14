@@ -4,7 +4,7 @@ import Layouts from "../layouts/Layouts.jsx";
 import Welcome from "../pages/Welcome.jsx";
 import Details from "../pages/CityDetails.jsx";
 import Login from "../pages/Login.jsx";
-//import SignIn from "../pages/SignIn";
+import SignIn from "../pages/SignIn";
 import NotFound from "../components/NotFound.jsx";
 
 const router = createBrowserRouter([
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       { path: "/cities", element: <Cities /> },
       { path: "/cities/:id", element: <Details /> },
       { path:'/login', element: <Login/> },
-     // { path: "/signIn", element: <SignIn /> },
+     { path: "/signIn", element: <SignIn /> },
       {
         path: "*",
         element: (
