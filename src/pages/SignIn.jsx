@@ -1,4 +1,4 @@
-/*import React from 'react'
+import React from 'react'
 import SignIn from "../components/SignIn.jsx";
 
  function SignIn() {
@@ -6,4 +6,4 @@ import SignIn from "../components/SignIn.jsx";
     <SignIn/>
   )
 }
-export default SignIn;*/
+export default SignIn;

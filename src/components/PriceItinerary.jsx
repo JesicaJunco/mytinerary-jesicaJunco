@@ -1,3 +1,5 @@
+
+
 const PriceItinerary =({price})=>{
     const maxRating = 5;
 

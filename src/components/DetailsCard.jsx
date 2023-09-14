@@ -31,13 +31,6 @@ import NotFound from './NotFound.jsx';
               {" "}
               Go back{" "}
             </LinkRouter>
-            <LinkRouter
-              to="/cities"
-              className="navbar-link text-black bg-gradient-to-r from-lime-500 via-lime-300 to-lime-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-700/70 font-medium rounded-lg text-sm absolute bottom-2 left-2 px-4 py-2 animate-bounce"
-            >
-              {" "}
-              Go home{" "}
-            </LinkRouter>
           </div>
           {
             city.itineraries?.length > 0
