@@ -1,9 +1,9 @@
 import React from 'react'
-import SignIn from "../components/SignIn.jsx";
+import FormSignIn from '../components/FormSignIn.jsx'
 
- function SignIn() {
+
+export default function SignIn() {
   return (
-    <SignIn/>
+    <FormSignIn/>
   )
 }
-export default SignIn;
