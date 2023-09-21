@@ -12,8 +12,8 @@ export default function Footer() {
     <>
       <footer className="text-center bg-white">
       <div className="flex justify-center items-center w-full p-4 lg:p-10">
-        <section className="flex flex-col lg:flex-row h-full items-center rounded-lg bg-yellow-600 p-6 text-center text-white">
-          <div className="lg:w-1/2 lg:pl-12">
+        <section className="flex flex-col lg:flex-row h-full items-center rounded-lg bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-600 to-sky-900 p-6 text-center text-white">
+          <div className=" text-center sm:px-[20%]">
             <h2 className="mb-4 lg:mb-8 text-2xl lg:text-3xl font-bold">Let it surprise you</h2>
             <p className="mb-4 pb-2 lg:pb-0">
             Our app will guide you to discover the perfect path for your

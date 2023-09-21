@@ -106,22 +106,22 @@ const Carousel = () => {
           {images.slice(index, index + 4).map((image, idx) => (
             <div key={idx} className="relative group">
               <img
-                className="absolute inset-0 object-cover object-center h-full w-full"
+                className="absolute inset-0 object-cover object-center h-full w-full "
                 src={image.url}
                 alt=""
               />
               <div className="bg-gray-800">
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
+              <div className="absolute inset-0 p-6 flex flex-col justify-end -mb-5 ml-5 text-center">
                 <p
-                  className={`text-lg font-customFont1 font-extrabold uppercase tracking-widest ${
-                    idx % 2 === 0 ? "text-pink-500" : "text-teal-300"
+                  className={`font-customFont1 font-extrabold uppercase tracking-widest bg-white opacity-80 ${
+                    idx % 2 === 0 ? "text-pink-500" : "text-teal-500"
                   }`}
                 >
                   {image.city}
                 </p>
                 <p
-                  className={`text-xl font-bold ${
-                    idx % 2 === 0 ? "text-green-100" : "text-white"
+                  className={`font-bold bg-white opacity-80 ${
+                    idx % 2 === 0 ? "text-black" : "text-black"
                   } sm:text-2xl`}
                 >
                   {image.country}

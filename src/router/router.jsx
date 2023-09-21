@@ -5,7 +5,9 @@ import Welcome from "../pages/Welcome.jsx";
 import Details from "../pages/CityDetails.jsx";
 import SignUp from "../pages/SignUp.jsx";
 import SignIn from "../pages/SignIn";
+import ItineraryCity from "../components/CityItinerary.jsx"
 import NotFound from "../components/NotFound.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,8 @@ const router = createBrowserRouter([
       { path: "/cities", element: <Cities /> },
       { path: "/cities/:id", element: <Details /> },
       { path: "/signup", element: <SignUp /> },
-      { path: "/signIn", element: <SignIn /> },
+      { path: "/signIn", element: (<ProtectedRoute path='/'><SignIn/></ProtectedRoute>) },
+      { path: "/itineraries/:id", element: <ItineraryCity /> },
       {
         path: "*",
         element: <NotFound />,

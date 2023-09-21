@@ -1,19 +1,20 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { get_itinerary_by_id, getItinerariesByCityId } from "../actions/itineraryActions.js";
+import { getItineraryById, getItinerariesByCityId } from "../actions/itineraryActions.js";
 
 const initialState = {
-    itinerary: {},
+    itinerary: [],
+    itineraries: []
 }
 
 const itineraryReducers = createReducer(initialState,
     (builder) => builder
-        .addCase(get_itinerary_by_id.fulfilled,
-            (state, action)=>{
-                return{
+        .addCase(getItineraryById.fulfilled,
+            (state, action) => {
+                return {
                     ...state,
-                    itinerary: action.payload.itinerary
+                    itinerary: action.payload.itinerary.itinerary
                 }
-        })
+            })
         .addCase(getItinerariesByCityId.fulfilled, (state, action) => {
             return {
                 ...state,

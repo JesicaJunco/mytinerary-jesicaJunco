@@ -10,9 +10,8 @@ export const user_photo = createAction('user_photo', (obj) => {
         }
     }
 })
-
 export default user_photo
-export const user_signin = createAsyncThunk('user_signin', async (id) =>{
+export const user_signin = createAsyncThunk('user_signin', async (obj) =>{
     try {
         const { data }= await axios.post('http://localhost:7000/api/auth/signin', obj.data)
         console.log(data)

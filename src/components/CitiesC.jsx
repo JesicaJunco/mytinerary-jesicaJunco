@@ -5,6 +5,7 @@ import NotFound from "./NotFound.jsx";
 import Search from "../components/svgs/Search.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { filter_cities, get_cities } from "../store/actions/cityActions.js";
+import GoBackButton from "./GoBackButton.jsx";
 
 // fetch, consulta con los bases de datos,// usuario redux.
 export default function Cities() {
@@ -57,6 +58,7 @@ export default function Cities() {
             <NotFound />
           }
         </div>
+        <div><GoBackButton /></div>
       </div>
     </>
   );

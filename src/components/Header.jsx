@@ -9,7 +9,6 @@ export default function Header() {
   return (
     <>
       <header className="absolute top-0 left-0 w-full flex justify-between h-12  items-center p-4">
-      
         <nav className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
