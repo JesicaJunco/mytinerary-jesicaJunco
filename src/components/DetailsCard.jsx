@@ -38,7 +38,7 @@ const detailsCard = () => {
                     <div key={itinerary._id} className='flex flex-col justify-between border rounded-md border-black border-opacity-50 shadow-slate-400 hover:shadow-xl m-2' style={{ maxWidth: '300px' }}>
                         <img className='w-full h-48 rounded-md p-1' src={itinerary.city.image} alt={itinerary.name} /> {/* Establece una altura fija para las imágenes */}
                         <h4 className='text-gray-600 my-1 mx-2'>{itinerary.name}</h4>
-                        <Anchor className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-sm shadow-slate-400 shadow-sm text-center font-medium tracking-wider text-white rounded-md hover:shadow-2xl hover:bg-purple-700 hover:from-purple-700 m-2 p-0.5" to={`/itineraries/${itinerary._id}`}>Details</Anchor>
+                        <Anchor className="bg-gradient-to-r from-orange-200 via-orange-600 to-pink-300  text-sm shadow-slate-400 shadow-sm text-center font-medium tracking-wider text-white rounded-md hover:shadow-2xl hover:bg-purple-700 hover:from-purple-700 m-2 p-0.5" to={`/itineraries/${itinerary._id}`}>Details</Anchor>
                     </div>
                 ))
                 : <NotFound />
