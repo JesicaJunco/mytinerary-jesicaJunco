@@ -6,7 +6,6 @@ import { user_signin_google } from '../store/actions/userActions.js'
 export const GoogleSignIn = () => {
     const googleButton = useRef()
     const store = useSelector(store => store.userReducer)
-        console.log(store);
     const dispatch = useDispatch();
     const handleCredentialResponse= async(response)=> {
         const data= {
@@ -22,8 +21,8 @@ export const GoogleSignIn = () => {
       }
     
     useEffect(()=>{
-        window.onload = function () {
-            google.accounts.id.initialize({
+      if (window.google) {
+        window.google.accounts.id.initialize({
               client_id: "113209228887-ltcvi03to75kckb62au3sumip3g5r9v2.apps.googleusercontent.com",
               callback: handleCredentialResponse
             });

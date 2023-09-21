@@ -5,7 +5,6 @@ import axios from "axios";
 export const getItineraryById = createAsyncThunk('getItineraryById', async (id) =>{
     try {
          const response = await axios.get(`http://localhost:7000/api/itineraries/${id}`)
-         console.log(response)
          return {
             itinerary: response.data
         }

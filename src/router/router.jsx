@@ -15,9 +15,9 @@ const router = createBrowserRouter([
     element: <Layouts />,
     children: [
       { path: "/", element: <Welcome /> },
-      { path: "/cities", element: <Cities /> },
+      { path: "/cities", element:<Cities/> },
       { path: "/cities/:id", element: <Details /> },
-      { path: "/signup", element: <SignUp /> },
+      { path: "/signup", element:(<ProtectedRoute path='/'> <SignUp /> </ProtectedRoute>)},
       { path: "/signIn", element: (<ProtectedRoute path='/'><SignIn/></ProtectedRoute>) },
       { path: "/itineraries/:id", element: <ItineraryCity /> },
       {

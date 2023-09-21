@@ -34,10 +34,9 @@ const userReducer = createReducer (initialState, (builder)=>
                 token: action.payload.token
             }
         })
-        .addCase(user_signout, () => {
+        .addCase(user_signout.fulfilled, () => {
             return {
-                user: null,
-                token: null
+                ...initialState
             }
         })
         .addCase(user_token, (state, action) => {

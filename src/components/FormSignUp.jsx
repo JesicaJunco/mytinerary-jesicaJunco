@@ -33,7 +33,6 @@ export default function FormSignUp() {
       [e.target.name]: e.target.value,
     });
   };
-  console.log(formData);
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
@@ -42,12 +41,7 @@ export default function FormSignUp() {
           data: formData,
         })
       );
-      Swal.fire({
-        icon: "success",
-        title: "Great!",
-        text: "User registered!",
-        footer: '<a href="/signin">Please Sign In</a>',
-      });
+    
     } catch (error) {
       console.log(error);
     }

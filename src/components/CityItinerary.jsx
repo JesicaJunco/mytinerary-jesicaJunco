@@ -17,10 +17,6 @@ const ItineraryCity = () => {
     useEffect(() => {
         dispatch(getItineraryById(id));
     }, [dispatch, id]);
-    
-    useEffect(() => {
-        console.log("itinerary:", itinerary);
-    }, [itinerary]);
    
     return (
         <div className="w-full min-h-screen flex flex-col items-center bg-purple-50 mt-12">

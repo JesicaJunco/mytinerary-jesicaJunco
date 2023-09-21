@@ -7,11 +7,12 @@ export default function ButtonAvatar() {
   const user = useSelector(store => store.userReducer.user);
   
   const dispatch = useDispatch();
-
+ 
   const handleSignout = async () => {
     try {
       const token = localStorage.getItem('token');
-      dispatch(user_signout(token, user));
+      dispatch(user_signout(token, user)) 
+    
     } catch (error) {
       console.log(error);
     }
@@ -31,12 +32,12 @@ export default function ButtonAvatar() {
       : 
         <LinkRouter
           to="/signin"
-          className="flex rounded-full border-white border-1 drop-shadow-darkShadow hover:drop-shadow-lightShadow "
-        >
+          className="navbar-link text-sky-500 my-2 font-bold hover:text-green-400 transition-colors duration-300 text-xl md:my-0 md:mx-2 "
+        >SignIn
         </LinkRouter>
       }
       <img
-            className="w-7 h-7 fill-black stroke-sky-500 md:ml-2 mr-1 rounded-3xl"
+            className="w-7 h-7 my-2 fill-black stroke-sky-500 md:my-0 md:mx-2 rounded-3xl mx-auto"
             src={user? user.image : defaultImage}/>
     </>
   );

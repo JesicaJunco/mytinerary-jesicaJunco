@@ -16,7 +16,6 @@ const detailsCard = () => {
     
     const city = useSelector((store) => store.cityReducer.city);
     const itineraries = useSelector((store) => store.itineraryReducer.itineraries);
-  console.log(itineraries)
     useEffect(() => {
         dispatch(get_city_by_id(id));
     }, [dispatch, id]);

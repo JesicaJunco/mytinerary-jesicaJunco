@@ -1,6 +1,8 @@
+import user from '../store/actions/userActions.js'
+
 const links = [
     {title: 'Welcome', to: '/'},
     {title: 'Cities', to: '/cities'},
-    {title: 'SignIn', to: '/signin'},
+   
 ]
 export default links
